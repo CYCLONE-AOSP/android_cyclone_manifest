@@ -9,7 +9,7 @@
            fetch="https://github.com/ArrowOS"
            revision="refs/heads/arrow-12.0" />
 
-  <project path="android" name="android_manifest" remote="cy" />
+  <project path="manifest" name="android_cyclone_manifest" remote="cy" />
   <remove-project name="platform/build" />
   <project path="build/make" name="android_build" groups="pdk"  remote="cy" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -54,7 +54,6 @@
   <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="cy" />
   <remove-project name="platform/frameworks/native" />
   <project path="frameworks/native" name="android_frameworks_native" groups="pdk" remote="cy" />
-
 
   <!-- hardware repos -->
   <remove-project name="platform/hardware/interfaces" />
@@ -150,10 +149,8 @@
   <project path="hardware/xiaomi" name="android_hardware_xiaomi" groups="pdk" remote="cy" />
 
   <!-- packages repos -->
-  <remove-project name="platform/packages/apps/Settings" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="cy" />
-  <remove-project name="platform/packages/apps/WallpaperPicker2" />
-  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" groups="pdk" remote="cy" />
+  <!--<remove-project name="platform/packages/apps/Settings" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="cy" /> -->
 
   <!-- system repos -->
   <remove-project name="platform/system/core" />
@@ -251,7 +248,6 @@
   <remove-project name="device/linaro/poplar" />
   <remove-project name="device/linaro/poplar-kernel" />
   <remove-project name="device/mediatek/wembley-sepolicy" />
-  <remove-project name="device/sample" />
   <remove-project name="device/ti/beagle-x15" />
   <remove-project name="device/ti/beagle-x15-kernel" />
 </manifest>
