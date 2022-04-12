@@ -162,7 +162,7 @@
   <project path="system/security" name="android_system_security" groups="pdk" remote="cy" />
 
   <!-- vendor repos -->
-  <project path="vendor/aosp" name="android_vendor_aosp" remote="cy" />
+  <project path="vendor/aosp" name="android_vendor_cyclone" remote="cy" />
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="arrow" />
   <project path="vendor/nxp/opensource/interfaces/nfc" name="android_vendor_nxp_interfaces_opensource_nfc" remote="arrow" />
   <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="android_vendor_nxp_opensource_external_libnfc-nci" remote="arrow" />
