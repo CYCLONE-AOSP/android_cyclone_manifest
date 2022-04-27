@@ -28,6 +28,16 @@
   <remove-project name="platform/bootable/recovery" />
   <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="cy" />
 
+  <remote  name="pixel"
+           fetch="https://github.com/PixelExperience"
+           revision="twelve"
+           review="gerrit.pixelexperience.org" />
+
+  <remote  name="pixel-gitlab-self-hosted"
+           fetch="https://gitlab.pixelexperience.org/android"
+           revision="twelve" />
+
+
   <!-- device repos -->
   <project path="device/aosp/sepolicy" name="android_device_cyclone_sepolicy" remote="cy" />
   <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="cy" />
@@ -45,6 +55,7 @@
   <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="arrow" />
   <project path="external/ant-wireless/hidl" name="android_external_ant-wireless_hidl" remote="arrow" />
   <project path="external/json-c" name="android_external_json-c" remote="arrow" />
+  <project path="external/faceunlock" name="external_faceunlock" remote="pixel-gitlab-self-hosted" />
 
   <!-- framework repos -->
   <remove-project name="platform/frameworks/av" />
@@ -150,7 +161,7 @@
   <!-- packages repos -->
   <!--<remove-project name="platform/packages/apps/Settings" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="cy" /> -->
-
+  <project path="packages/apps/FaceUnlockService" name="packages_apps_FaceUnlockService" remote="pixel" />
   <!-- system repos -->
   <remove-project name="platform/system/core" />
   <project path="system/core" name="android_system_core" groups="pdk" remote="cy" />
