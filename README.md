@@ -1,32 +1,26 @@
-# Pixel Experience #
+Cyclone
+========
 
-### Sync ###
+Getting Started
+---------------
+
+To get started with Android, you'll need to get
+familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
+
+To initialize your local repository using the Cyclone trees, use a command like this:
 
 ```bash
-
-# Initialize local repository
-repo init -u https://github.com/PixelExperience/manifest -b thirteen-plus
-
-# Sync
+repo init -u https://github.com/CYCLONE-AOSP/android_cyclone_manifest.git -b thirteen-august
+```
+Then to sync up:
+```bash
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
-### Build ###
-
+Building the source
+---------------
 ```bash
-
-# Set up environment
-$ . build/envsetup.sh
-
-# Choose a target
-$ lunch aosp_$device-userdebug
-
-# Build the code
-$ mka bacon -jX
+. build/envsetup.sh
+lunch aosp_<device>-userdebug
+mka bacon (or) brunch <device>
 ```
-
-### Submitting Patches ###
-
-Patches are always welcome! Please submit your patches to our Gerrit.
-
-[Gerrit push guide](https://wiki.pixelexperience.org/help/submit-patch/)
