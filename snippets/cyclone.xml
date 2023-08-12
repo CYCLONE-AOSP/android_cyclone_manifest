@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="cyclone"
+          fetch="https://github.com/CYCLONE-AOSP"
+          revision="thirteen" />
+
+  <remote name="gitlab"
+          fetch="https://gitlab.com" />
+
+  <remote name="cyclone-gitlab"
+          fetch="https://gitlab.com/CYCLONE-AOSP"
+          revision="thirteen" />
+
+  <!-- Cyclone Repos -->
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="cyclone" />
+  <project path="frameworks/base" name="frameworks_base" remote="cyclone" />
+  <project path="frameworks/native" name="frameworks_native" remote="cyclone" />
+
+  <!-- General repos -->
+  <project path="bionic" name="bionic" remote="cyclone" />
+  <project path="build/make" name="build" remote="cyclone">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="cyclone" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Vendor repos -->
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="cyclone" />
+  <project path="vendor/aosp" name="vendor_aosp" remote="cyclone" />
+  <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="cyclone" />
+  <project path="vendor/support" name="vendor_support" remote="cyclone" />
+  <project path="vendor/overlays/Elegance" name="vendor_overlays_Elegance" remote="cyclone" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="cyclone" />
+  <project path="packages/apps/Cyclone" name="packages_apps_Cyclone" remote="cyclone" />
+
+  <!-- System Repos -->
+  <project path="system/sepolicy" name="system_sepolicy" remote="cyclone" />
+
+</manifest>
